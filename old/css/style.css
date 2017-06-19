@@ -1,0 +1,868 @@
+@charset "utf-8";
+
+
+/* global -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+@font-face {
+	font-family: Gotham-Light;
+	src: url(../font/gothamhft-light-webfont.eot);
+	src: url(../font/gothamhft-light-webfont.ttf);
+	src: url(../font/gothamhft-light-webfont.woff);
+	src: url(../font/gothamhft-light-webfont.woff2);
+}
+
+@font-face {
+	font-family: Gotham-Book;
+	src: url(../font/gothamhft-book-webfont.eot);
+	src: url(../font/gothamhft-book-webfont.ttf);
+	src: url(../font/gothamhft-book-webfont.woff);
+	src: url(../font/gothamhft-book-webfont.woff2);
+}
+
+@font-face {
+	font-family: Gotham-Medium;
+	src: url(../font/gothamhft-medium-webfont.eot);
+	src: url(../font/gothamhft-medium-webfont.ttf);
+	src: url(../font/gothamhft-medium-webfont.woff);
+	src: url(../font/gothamhft-medium-webfont.woff2);
+}
+
+@font-face {
+	font-family: Gotham-Bold;
+	src: url(../font/gothamhft-bold-webfont.eot);
+	src: url(../font/gothamhft-bold-webfont.ttf);
+	src: url(../font/gothamhft-bold-webfont.woff);
+	src: url(../font/gothamhft-bold-webfont.woff2);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: rgb(220, 220, 200);
+	background-color: #dcdcdc;
+	overflow-x: hidden;
+}
+
+p { 
+	margin: 0px;
+	padding: 0px;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+	appearance: normal;
+	outline: 0;
+}
+
+#main {
+	font-family: Gotham-Light;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+/* topmenu -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#topmenu {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background-color: rgb(25, 165, 125);
+	background-color: #19a57d;
+	width: 100%;
+	margin: 0px;
+	padding: 0;
+	z-index: 410;
+	
+}
+#firstrow {
+	margin: 0 2rem 0 2rem;
+	border-bottom: thin solid rgba(255, 255, 255, 0.3);
+}
+
+#firstrow .searchicon{
+	float: left;
+	height: 4rem;
+	width: 4rem;
+	margin: 2rem 0 0 0;
+	font-family: Gotham-Light;
+	font-size: 3.2rem;
+	color: rgba(255, 255, 255, .8);
+	background: none;
+	background-image: url(../img/search.svg);
+	background-repeat: no-repeat;
+	background-size: 4rem;
+}
+
+#topmenu input {
+	height: 8rem;
+	width: 49rem;
+	padding: 0 0 0 1rem;
+	border: none;
+	outline: none;
+	font-family: Gotham-Light;
+	font-size: 3.2rem;
+	color: rgba(255, 255, 255, .8);
+	background: none;
+}
+
+#topmenu input::-webkit-input-placeholder {
+   color: rgba(255, 255, 255, 0.8);  
+}
+
+#topmenu input:focus {
+	border: none;
+	outline: none;
+}
+
+#firstrow img {
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	pointer-events: none;
+}
+
+#menubtn {
+	height: 4rem;
+	width: 4rem;
+	margin: 2rem 0 0 0;
+	background-image:url(../img/menu.svg);
+}
+
+#topmenu .secondrow {
+	margin: 2rem 0 2rem 0;
+}
+
+#topmenu .secondrow .fleft {
+	padding: 0 0 0 2rem;
+}
+
+#topmenu .secondrow .fright {
+	padding: 0 2rem 0 0;
+}
+
+#topmenu .secondrow img {
+	display: inline-block;
+	width: 3rem;
+	height: 3rem;
+	pointer-events: none;
+}
+
+#topmenu .secondrow label {
+	color: rgba(255, 255, 255, .8);
+	display: inline-block;
+	font-size: 2.4rem;
+	pointer-events: none;
+	margin: 0 0 0 1rem;
+	vertical-align: top;
+	pointer-events: none;
+}
+
+/* filters menu -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#filtermenuwrap {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	top: 0rem;
+	left: 0rem;
+	background-color: rgb(77, 77, 77);	
+	margin: 0;
+	padding: 18rem 0 0 0;
+	z-index: 400;
+}
+
+#filtermenuwrap hr {
+	margin: 2rem;
+	border: 0;
+    height: 1px;
+    background: rgb(128, 128, 128);
+}
+
+#filtermenuwrap .label {
+	font-family: Gotham-Light;
+	font-size: 3.2rem;
+	color: rgb(204, 204, 204);
+	margin: 0 0 2rem 2rem;
+}
+
+#filtermenuwrap input {
+	height: 8rem;
+	width: 58rem;
+	margin: 6.5rem 0 0 2rem;
+}
+
+#filternmenu, datemenu {
+	display: none;	
+	margin: 2rem 0 0 0;
+}
+
+.menucontent {
+	padding: 0 0 36rem 0;	
+}
+
+.menucontent button ,#filternmenu button {
+	height: 10rem;
+	width: 10rem;
+	margin: 0 0 0 2rem;
+	font-family: Gotham-Book;
+	font-size: 1.8rem;
+	color: rgb(179, 179, 179);
+	border: 1px solid rgb(179, 179, 179);
+	vertical-align: middle;
+}
+
+#filternmenu .selected {
+	color: #4D4D4D;
+	background-color: rgb(179, 179, 179);
+	border: 1px solid rgb(179, 179, 179);
+	vertical-align: middle;
+}
+
+#menuCTA {
+	position: fixed;
+	bottom: 0rem;
+	left: 0rem;
+	width: 100%;
+	white-space: normal;
+	font-size: 0px;
+}
+
+#menuCTA button {
+	display: inline-block;
+	font-family: Gotham-Medium;
+	font-size: 2.8rem;
+	color: rgb(242, 242, 242);
+	height: 10rem;
+	width: 100%;
+}
+
+#menuApply {
+	background-color: rgb(26, 26, 26);
+}
+
+/* main menu -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#mainmenu {
+	position: fixed;
+	display: none;
+	top: 8rem;
+	right: 0rem;
+	background-color: rgb(77, 77, 77);	
+	margin: 0;
+	padding: 0 0 0 0;
+	z-index: 420;
+	text-align: right;
+	
+}
+
+#mainmenu .cta {
+	display:block;
+	height: 10rem;
+	width: 30rem;
+	padding: 0 0 0 2rem;
+	text-align: left;
+	font-family: Gotham-Light;
+	font-size: 2.8rem;
+	color: rgb(242, 242, 242);
+	border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+#closeMainMenu {
+	float: right;
+	height: 8rem;
+	width: 8rem;
+	margin-top: -8rem;
+	background-image:url(../img/clear.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 4rem 4rem;
+	background-color: #19a57d;
+}
+
+/*--------------
+    Results
+---------------*/
+
+.ui.search > .results {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-transform-origin: center top;
+      -ms-transform-origin: center top;
+          transform-origin: center top;
+  background: none;
+  width: 100%;
+  overflow: auto;
+  padding: 9rem 0 0 0;
+  box-shadow: 0px 2px 4px 0px rgba(34, 36, 38, 0.10), 0px 2px 10px 0px rgba(34, 36, 38, 0.06);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  z-index: 901;
+  font-size: 2.4rem;
+}
+
+.locClearBtn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 8rem;
+	width: 8rem;
+	background-image:url(../img/clear.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 4rem 4rem;
+	background-color: #19a57d;
+}
+
+.ui.search > .results .result {
+  cursor: pointer;
+  display: block;
+  padding: 2rem 0 2rem 2rem;
+  color: rgb(102, 102, 102);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+}
+
+.ui.search > .results .empty {
+  cursor: pointer;
+  display: block;
+  padding: 2rem 0 2rem 2rem;
+  color: rgb(102, 102, 102);
+  background: rgb(255, 255, 255);
+}
+
+.ui.search > .results .empty .header {
+  display: none;
+}
+.ui.search > .results .result:last-child {
+  border-bottom: none !important;
+}
+
+/* Image */
+.ui.search > .results .result .image {
+  float: right;
+  overflow: hidden;
+  background: none;
+  width: 5em;
+  height: 3em;
+  border-radius: 0.25em;
+}
+.ui.search > .results .result .image img {
+  display: block;
+  width: auto;
+  height: 100%;
+}
+
+/* viewsmenu -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#viewsmenu {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	height: 11rem;
+	width: 11rem;
+	z-index: 300;
+}
+
+#viewsmenu img {
+	width: 11rem;
+	height: 11rem;
+	margin: 0;
+}
+
+/* datepicker -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.ui-datepicker-inline {
+	color: rgb(179, 179, 179);
+	font-size: 2.4rem;
+	padding: 0 0 0 2rem;
+}
+
+.ui-datepicker-inline a, .ui-datepicker-inline a:hover, .ui-datepicker-inline a:visited , .ui-datepicker-inline a:active {
+	color: rgb(179, 179, 179);
+	text-decoration: none;
+}
+
+.ui-datepicker-header {
+	padding: 0 0 3rem 0;
+}
+
+.ui-datepicker-prev {
+	float: left;
+	background-color: rgb(77, 77, 77) !important;
+}
+
+.ui-datepicker-next {
+	float: right;
+	padding: 0 2rem 0 0;
+	background-color: rgb(77, 77, 77) !important;
+}
+
+.ui-datepicker-title {
+	text-align: center;
+}
+
+.ui-datepicker-calendar {
+	width: 60rem;
+	border-collapse: collapse;
+	clear: both;
+	table-layout: fixed;
+}
+
+.ui-datepicker-calendar th {
+	font-weight: normal;
+	padding: 0 0 1rem 0;
+}
+
+.ui-datepicker-calendar td {
+	height: 8rem;
+	border: 1px solid rgb(179, 179, 179);
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.ui-datepicker-unselectable, .ui-state-disabled {
+	color: rgb(112, 112, 112) !important;
+	background-color: rgb(72, 72, 72);
+}
+
+.ui-datepicker-current-day {
+	background-color: rgb(179, 179, 179);
+ }
+ 
+ .ui-datepicker-current-day a, .ui-datepicker-current-day a:hover, .ui-datepicker-current-day a:visited , .ui-datepicker-current-day a:active {
+	color: rgb(77, 77, 77);
+	text-decoration: none;
+}
+
+/* grid -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#grid {
+	width: 64rem;
+	margin: 18rem auto 0 auto;
+}
+
+#grid .block {
+	background-color: rgb(255, 255, 255);
+	padding: 2rem;
+	margin: 2rem 0 0 0;
+}
+
+#grid .title {
+	font-family: Gotham-Bold;
+	font-size: 3.2rem;
+	color: rgb(102, 102, 102);
+	display: block;
+	float: left;
+}
+
+#grid .heart {
+	display: block;
+	float: right;
+	width: 3rem;
+	height: 3rem;
+}
+
+#grid .star {
+	display: block;
+	float: left;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+#grid .starcount {
+	font-family: Gotham-Light;
+	font-size: 1.8rem;
+	color: rgb(179, 179, 179);
+	display: block;
+	float: left;
+	line-height: 2.8rem;
+	margin: 0rem 0rem 0rem 1rem;
+}
+
+#grid .morning {
+	width: 12rem;
+	border-right: solid;
+	border-right-width: thin;
+	border-right-color: rgb(204, 204, 204);
+	float: left;
+	margin: 2rem 0 0 0;
+}
+
+#grid .afternoon {
+	float: left;
+	margin: 2rem 0 0 2rem;
+}
+
+#grid .morning .price,  #grid .afternoon .price{
+	font-family: Gotham-Bold;
+	font-size: 4.8rem;
+	color: rgb(102, 102, 102);
+}
+
+#grid .morning .time,  #grid .afternoon .time{
+	font-family: Gotham-Light;
+	font-size: 2.2rem;
+	color: rgb(153, 153, 153);
+}
+
+#grid .graph {
+	float: right;
+	width: 30rem;
+	height: 10rem;
+	background-image: url(../img/graph.svg);	
+}
+.teetime {
+	width: 29rem;
+	height: 18rem;
+	margin: 2rem 0 0 0;
+	overflow: hidden;
+}
+
+.teeleft {
+	float: left;
+	width: 14rem;
+	height: 12rem;
+	margin: 3rem 0 0 0;
+	border-right: solid;
+	border-right-width: thin;
+	border-right-color: rgba(255, 255, 255, .4);
+	
+}
+
+.teeright {
+	float: left;
+	width: 14rem;
+	height: 12rem;
+	margin: 3rem 0 0 0;
+}
+
+.teetime .price {
+	width: 13rem;
+	height: 7.5rem;
+	font-family: Gotham-Bold;
+	font-size: 6rem;
+	color: rgb(255, 255, 255);
+	margin: 0 0 0 .5rem;
+	overflow: hidden;
+}
+
+.teetime .bookbtn {
+	width: 12rem;
+	margin: 0 0 0 1rem;
+	padding: 0;
+	background: none;
+	border-top: solid;
+	border-top-width: thin;
+	border-top-color: rgba(255, 255, 255, .4);
+}
+
+.teetime .book {
+	font-family: Gotham-Bold;
+	font-size: 1.8rem;
+	color: rgb(255, 255, 255);
+	margin: .8rem 0 0 0;
+}
+
+.teetime .provider {
+	font-family: Gotham-Light;
+	font-size: 1.2rem;
+	color: rgba(255, 255, 255, 0.8);
+	margin: .2rem 0 0 0;
+}
+
+.teetime .time {
+	height: 4rem;
+	font-family: Gotham-Bold;
+	font-size: 3.2rem;
+	color: rgb(255, 255, 255);
+	margin: .2rem 0 0 1rem;
+}
+
+.teetime .ampm {
+	font-family: Gotham-Light;
+	font-size: 1.8rem;
+	margin: 0 0 0 -.5rem;
+}
+
+.teetime .players {
+	height: 3.3rem;
+	font-family: Gotham-Book;
+	font-size: 2.4rem;
+	color: rgb(255, 255, 255);
+	margin: 0 0 0 1rem;
+}
+.teetime .play {
+	font-family: Gotham-Book;
+	font-size: 1.8rem;
+}
+
+.teetime .features {
+	width: 13rem;
+	margin: 0 0 0 1rem;
+	border-top: solid;
+	border-top-width: thin;
+	border-top-color: rgba(255, 255, 255, .4);
+}
+
+.teetime .feature {
+	width: 3rem;
+	margin: 1rem 0.5rem 0 0;
+}
+
+.golfnow {
+	background-color: rgb(19, 116, 155);
+}
+
+.pga {
+	background-color: rgb(236, 98, 127);
+}
+
+.other {
+	background-color: rgb(128, 128, 128);
+}
+
+/* flip animation -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+#flipcont {
+	position: absolute;
+	left: 0;
+	top: 10rem;
+	width: 100%;
+	perspective: 100rem;
+	visibility: hidden;
+	z-index: 200;
+}
+
+#flipcard {
+	transform-style: preserve-3d;
+	transition: transform 0.35s;
+}
+
+#flipcard .front, #flipcard .back {
+  backface-visibility: hidden; 
+  position: absolute;
+}
+
+#flipcard .front {
+	right: 2rem;
+	top: 0px;
+}
+#flipcard .back {
+	transform: rotateY( -180deg );
+	right: 2rem;
+	top: 0px;
+}
+
+#flipcard.flipped {
+  transform: rotateY( -180deg );
+}
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes flipF {
+	from { -webkit-transform: rotateY(0deg);    }
+	to   { -webkit-transform: rotateY(-180deg); }
+}
+
+@-webkit-keyframes flipB {
+	from { -webkit-transform: rotateY(-180deg);    }
+	to   { -webkit-transform: rotateY(0deg); }
+}
+
+
+#flipcard.flipBack {
+	animation-name: flipB;
+	animation-duration: 0.35s;
+	animation-iteration-count: 1;
+}
+
+#flipcard.flipForward {
+	animation-name: flipF;
+	animation-duration: 0.35s;
+}
+
+
+/* spin animation -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.loading {
+	background-image: url(../img/loading.svg) !important;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 750ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 750ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 750ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+/* Search animation -----------------------------------------------------------------------------------------------------------------------------------------*/
+
+.clearicon {
+	background-image: url(../img/clear.svg)!important;
+}
+
+.menuicon {
+	background-image: url(../img/menu.svg)!important;
+}
+
+.remove1 {
+	background-image: url(../img/clear.svg)!important;
+    -webkit-animation-name: clearswap;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: clearswap;
+    -moz-animation-duration: 800ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: clearswap;
+    -ms-animation-duration: 800ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: ease-in-out;
+    
+    animation-name: clearswap;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+.remove2 {
+	background-image: url(../img/menu.svg)!important;
+    -webkit-animation-name: menuswap;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: menuswap;
+    -moz-animation-duration: 800ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -ms-animation-name: menuswap;
+    -ms-animation-duration: 800ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: ease-in-out;
+    
+    animation-name: menuswap;
+    animation-duration: 800ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes clearswap {
+    0% {
+        transform:rotate(0deg);
+		background-image: url(../img/menu.svg);
+    }
+	50% {
+        transform:rotate(210deg);
+		background-image: url(../img/clear.svg);
+    }
+	75% {
+        transform:rotate(160deg);
+    }
+	100% {
+        transform:rotate(180deg);
+    }
+}
+
+@keyframes menuswap {
+    0% {
+        transform:rotate(0deg);
+		background-image: url(../img/clear.svg);
+    }
+	50% {
+        transform:rotate(210deg);
+		background-image: url(../img/menu.svg);
+    }
+	75% {
+        transform:rotate(160deg);
+    }
+	100% {
+        transform:rotate(180deg);
+    }
+}
+
+
+
+
+
+/* z-index -----------------------------------------------------------------------------------------------------------------------------------------
+
+#flipcont - 200
+#viewsmenu - 300
+#filtermenuwrap - 400
+#topmenu - 410
+.ui.search > .results - 901
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

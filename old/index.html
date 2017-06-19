@@ -1,0 +1,782 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Teebox</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div id="main">
+    	<menu id="topmenu">
+        	<div id="firstrow">
+            	<div class="searchicon"></div>
+                <div class="fleft">
+					<div class="ui search">
+                      <input id="locSearch" class="prompt" type="text" placeholder="Choose location...">
+                      <div id="locSearchResults" class="results"></div>
+                    </div>
+                </div><!-- fleft -->
+                <button class="fright" id="menubtn"></button>
+                <div class="clear"></div>
+            </div><!-- toprow -->
+            <div class="secondrow">
+				<div class="fleft" id="datebtn">
+                	<img src="img/calendar.svg">
+                    <label id="datebtnlabel">Friday Sept 05</label>
+                </div>
+               	<div class="fright" id="filterbtn">
+                	<img src="img/filter.svg">
+                    <label>Filter</label>
+                </div> 
+                <div class="clear"></div>
+            </div><!-- secondrow -->
+        </menu>
+        
+        <menu id="viewsmenu">
+            <img src="img/favorites.svg">
+        </menu>
+        
+        <menu id="filtermenuwrap">
+          <div class="menucontent" id="filternmenu">
+                <p class="label">Area</p>
+                <button>Central</button>
+                <button class="selected">North</button>
+                <button>East</button>
+                <button>South</button>
+                <button>West</button>
+                <hr>               
+                <p class="label">Players</p>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <hr>               
+                <p class="label">Holes</p>
+                <button>9</button>
+                <button>18</button>
+                <hr>
+                <p class="label">Price</p>
+                <button>$20 Or Less</button>
+                <button>$40</button>
+                <button>$60</button>
+                <button>$80</button>
+                <button>$100 Or More</button>
+                <hr>
+                <p class="label">Time</p>
+                <button>AM</button>
+                <button>PM</button>
+            </div><!-- filtermenu -->
+            <div class="menucontent" id="datemenu">
+				<div id="datepicker"></div>
+            </div><!-- datemenu -->
+        	<nav id="menuCTA">
+                <button id="menuApply">Apply</button>
+            </nav>
+        </menu><!-- filtermenuwrap -->
+        
+        <menu id="mainmenu">
+        		<button id="closeMainMenu"></button>
+                <div class="clear"></div>
+        	    <button id="signIn" class="cta">Sign In</button>
+                <button id="signUp" class="cta">Sign Up</button>
+                <button id="settings" class="cta">Settings</button>
+        </menu><!-- mainmenu -->
+        
+        
+        <aside id="flipcont">
+        	<div id="flipcard">
+            	<div class="front">
+                    <div class="teetime fright pga">
+                        <div class="teeleft">
+                            <p class="price">$40</p>
+                            <button class="bookbtn">
+                                <p class="book">Book</p>
+                                <p class="provider">Golf Now</p>
+                            </button>
+                        </div>
+                        <div class="teeright">
+                            <p class="time">10:05 <span class="ampm">am</span></p>
+                            <p class="players">1-4 <span class="play">Players</span></p>
+                            <div class="features">
+                                <img class="feature" src="img/18.svg">
+                                <img class="feature" src="img/deal.svg">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- teetime -->
+                    
+                    <div class="clear"></div>
+                    
+                    <div class="teetime fright golfnow">
+                        <div class="teeleft">
+                            <p class="price">$40</p>
+                            <button class="bookbtn">
+                                <p class="book">Book</p>
+                                <p class="provider">Golf Now</p>
+                            </button>
+                        </div>
+                        <div class="teeright">
+                            <p class="time">10:05 <span class="ampm">am</span></p>
+                            <p class="players">1-4 <span class="play">Players</span></p>
+                            <div class="features">
+                                <img class="feature" src="img/18.svg">
+                                <img class="feature" src="img/deal.svg">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- teetime -->
+                    
+                </div><!-- Flip Front -->
+                
+                <div class="back">
+                    <div class="teetime fright other">
+                        <div class="teeleft">
+                            <p class="price">$40</p>
+                            <button class="bookbtn">
+                                <p class="book">Book</p>
+                                <p class="provider">Golf Now</p>
+                            </button>
+                        </div>
+                        <div class="teeright">
+                            <p class="time">10:05 <span class="ampm">am</span></p>
+                            <p class="players">1-4 <span class="play">Players</span></p>
+                            <div class="features">
+                                <img class="feature" src="img/18.svg">
+                                <img class="feature" src="img/deal.svg">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- teetime -->
+                    
+                    <div class="clear"></div>
+                    
+                    <div class="teetime fright golfnow">
+                        <div class="teeleft">
+                            <p class="price">$40</p>
+                            <button class="bookbtn">
+                                <p class="book">Book</p>
+                                <p class="provider">Golf Now</p>
+                            </button>
+                        </div>
+                        <div class="teeright">
+                            <p class="time">10:05 <span class="ampm">am</span></p>
+                            <p class="players">1-4 <span class="play">Players</span></p>
+                            <div class="features">
+                                <img class="feature" src="img/18.svg">
+                                <img class="feature" src="img/deal.svg">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div><!-- teetime -->
+                    
+                </div><!-- Flip Back -->
+                
+            </div><!-- Flip card -->   
+            
+        </aside> <!-- Flip Animation End -->
+        
+        
+        <div id="grid">
+ 	 	  <div class="block">
+        	  <p class="title">North Shore Golf Club</p>
+        	  <img class="heart"  src="img/heart.svg">
+        	  <div class="clear"></div>
+                  <img class="star"  src="img/star.svg">
+                  <img class="star"  src="img/star.svg">
+                  <img class="star"  src="img/star.svg">
+                  <img class="star"  src="img/star.svg">
+                  <img class="star"  src="img/star.svg">
+        	  <p class="starcount">(47)</p>
+        	  <div class="clear"></div>
+        	  <div class="morning">
+        	    <p class="price">$40</p>
+        	    <p class="time">10:15 <span class="ampm">am</span></p>
+      	    </div>
+        	  <div class="afternoon">
+        	    <p class="price">$32</p>
+        	    <p class="time">2:27 <span class="ampm">pm</span></p>
+      	    </div>
+        	  <canvas id="tc" class="graph" >
+              	
+              
+              </canvas>>
+        	  <div class="clear"></div>
+              
+            <div class="teetimes">
+        	<div class="teetime fleft golfnow">
+        	    <div class="teeleft">
+        	      <p class="price">$40</p>
+        	      <button class="bookbtn">
+        	        <p class="book">Book</p>
+        	        <p class="provider">Golf Now</p>
+       	          </button>
+      	      </div>
+        	    <div class="teeright">
+        	      <p class="time">10:05 <span class="ampm">am</span></p>
+        	      <p class="players">1-4 <span class="play">Players</span></p>
+        	      <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"> </div>
+      	      </div>
+        	    <div class="clear"></div>
+      	    </div>
+        	  <div class="teetime fright pga">
+        	    <div class="teeleft">
+        	      <p class="price">$40</p>
+        	      <button class="bookbtn">
+        	        <p class="book">Book</p>
+        	        <p class="provider">Golf Now</p>
+       	          </button>
+      	      </div>
+        	    <div class="teeright">
+        	      <p class="time">10:05 <span class="ampm">am</span></p>
+        	      <p class="players">1-4 <span class="play">Players</span></p>
+        	      <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"> </div>
+      	      </div>
+        	    <div class="clear"></div>
+      	    </div>
+        	  <div class="clear"></div>
+        	  <div class="teetime fleft other">
+        	    <div class="teeleft">
+        	      <p class="price">$40</p>
+        	      <button class="bookbtn">
+        	        <p class="book">Book</p>
+        	        <p class="provider">Golf Now</p>
+       	          </button>
+      	      </div>
+        	    <div class="teeright">
+        	      <p class="time">10:05 <span class="ampm">am</span></p>
+        	      <p class="players">1-4 <span class="play">Players</span></p>
+        	      <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"> </div>
+      	      </div>
+        	    <div class="clear"></div>
+      	    </div>
+        	  <div class="teetime fright golfnow">
+        	    <div class="teeleft">
+        	      <p class="price">$40</p>
+        	      <button class="bookbtn">
+        	        <p class="book">Book</p>
+        	        <p class="provider">Golf Now</p>
+       	          </button>
+      	      </div>
+        	    <div class="teeright">
+        	      <p class="time">10:05 <span class="ampm">am</span></p>
+        	      <p class="players">1-4 <span class="play">Players</span></p>
+        	      <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"> </div>
+      	      </div>
+        	    <div class="clear"></div>
+      	    </div>
+        	  <div class="clear"></div>
+              </div><!-- teetimes -->
+      	  </div>
+   		  <div class="block">
+       	 	  <p class="title">North Shore Golf Club</p>
+       	 	  <img class="heart"  src="img/heart.svg">
+       	 	  <div class="clear"></div>
+       	 	  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       	 	  <p class="starcount">(47)</p>
+       	 	  <div class="clear"></div>
+       	 	  <div class="morning">
+       	 	    <p class="price">$40</p>
+       	 	    <p class="time">10:15 <span class="ampm">am</span></p>
+   	 	      </div>
+       	 	  <div class="afternoon">
+       	 	    <p class="price">$32</p>
+       	 	    <p class="time">2:27 <span class="ampm">pm</span></p>
+   	 	      </div>
+       	 	  <div class="graph"></div>
+       	 	  <div class="clear"></div>
+       	 	  <div class="teetimes">
+       	 	    <div class="teetime fleft golfnow">
+       	 	      <div class="teeleft">
+       	 	        <p class="price">$40</p>
+       	 	        <button class="bookbtn">
+       	 	          <p class="book">Book</p>
+       	 	          <p class="provider">Golf Now</p>
+   	 	            </button>
+   	 	          </div>
+       	 	      <div class="teeright">
+       	 	        <p class="time">10:05 <span class="ampm">am</span></p>
+       	 	        <p class="players">1-4 <span class="play">Players</span></p>
+       	 	        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   	 	          </div>
+       	 	      <div class="clear"></div>
+   	 	        </div>
+       	 	    <div class="teetime fright pga">
+       	 	      <div class="teeleft">
+       	 	        <p class="price">$40</p>
+       	 	        <button class="bookbtn">
+       	 	          <p class="book">Book</p>
+       	 	          <p class="provider">Golf Now</p>
+   	 	            </button>
+   	 	          </div>
+       	 	      <div class="teeright">
+       	 	        <p class="time">10:05 <span class="ampm">am</span></p>
+       	 	        <p class="players">1-4 <span class="play">Players</span></p>
+       	 	        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   	 	          </div>
+       	 	      <div class="clear"></div>
+   	 	        </div>
+       	 	    <div class="clear"></div>
+       	 	    <div class="teetime fleft other">
+       	 	      <div class="teeleft">
+       	 	        <p class="price">$40</p>
+       	 	        <button class="bookbtn">
+       	 	          <p class="book">Book</p>
+       	 	          <p class="provider">Golf Now</p>
+   	 	            </button>
+   	 	          </div>
+       	 	      <div class="teeright">
+       	 	        <p class="time">10:05 <span class="ampm">am</span></p>
+       	 	        <p class="players">1-4 <span class="play">Players</span></p>
+       	 	        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   	 	          </div>
+       	 	      <div class="clear"></div>
+   	 	        </div>
+       	 	    <div class="teetime fright golfnow">
+       	 	      <div class="teeleft">
+       	 	        <p class="price">$40</p>
+       	 	        <button class="bookbtn">
+       	 	          <p class="book">Book</p>
+       	 	          <p class="provider">Golf Now</p>
+   	 	            </button>
+   	 	          </div>
+       	 	      <div class="teeright">
+       	 	        <p class="time">10:05 <span class="ampm">am</span></p>
+       	 	        <p class="players">1-4 <span class="play">Players</span></p>
+       	 	        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   	 	          </div>
+       	 	      <div class="clear"></div>
+   	 	        </div>
+       	 	    <div class="clear"></div>
+   	 	      </div>
+       	 	  <!-- teetimes -->
+   	 	  </div>
+   		  <div class="block">
+       		  <p class="title">North Shore Golf Club</p>
+       		  <img class="heart"  src="img/heart.svg">
+       		  <div class="clear"></div>
+       		  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       		  <p class="starcount">(47)</p>
+       		  <div class="clear"></div>
+       		  <div class="morning">
+       		    <p class="price">$40</p>
+       		    <p class="time">10:15 <span class="ampm">am</span></p>
+   		      </div>
+       		  <div class="afternoon">
+       		    <p class="price">$32</p>
+       		    <p class="time">2:27 <span class="ampm">pm</span></p>
+   		      </div>
+       		  <div class="graph"></div>
+       		  <div class="clear"></div>
+       		  <div class="teetimes">
+       		    <div class="teetime fleft golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright pga">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+       		    <div class="teetime fleft other">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+   		      </div>
+       		  <!-- teetimes -->
+   		  </div>
+   		  <div class="block">
+       		  <p class="title">North Shore Golf Club</p>
+       		  <img class="heart"  src="img/heart.svg">
+       		  <div class="clear"></div>
+       		  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       		  <p class="starcount">(47)</p>
+       		  <div class="clear"></div>
+       		  <div class="morning">
+       		    <p class="price">$40</p>
+       		    <p class="time">10:15 <span class="ampm">am</span></p>
+   		      </div>
+       		  <div class="afternoon">
+       		    <p class="price">$32</p>
+       		    <p class="time">2:27 <span class="ampm">pm</span></p>
+   		      </div>
+       		  <div class="graph"></div>
+       		  <div class="clear"></div>
+       		  <div class="teetimes">
+       		    <div class="teetime fleft golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright pga">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+       		    <div class="teetime fleft other">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+   		      </div>
+       		  <!-- teetimes -->
+   		  </div>
+   		  <div class="block">
+       		  <p class="title">North Shore Golf Club</p>
+       		  <img class="heart"  src="img/heart.svg">
+       		  <div class="clear"></div>
+       		  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       		  <p class="starcount">(47)</p>
+       		  <div class="clear"></div>
+       		  <div class="morning">
+       		    <p class="price">$40</p>
+       		    <p class="time">10:15 <span class="ampm">am</span></p>
+   		      </div>
+       		  <div class="afternoon">
+       		    <p class="price">$32</p>
+       		    <p class="time">2:27 <span class="ampm">pm</span></p>
+   		      </div>
+       		  <div class="graph"></div>
+       		  <div class="clear"></div>
+       		  <div class="teetimes">
+       		    <div class="teetime fleft golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright pga">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+       		    <div class="teetime fleft other">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+   		      </div>
+       		  <!-- teetimes -->
+   		  </div>
+   		  <div class="block">
+       		  <p class="title">North Shore Golf Club</p>
+       		  <img class="heart"  src="img/heart.svg">
+       		  <div class="clear"></div>
+       		  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       		  <p class="starcount">(47)</p>
+       		  <div class="clear"></div>
+       		  <div class="morning">
+       		    <p class="price">$40</p>
+       		    <p class="time">10:15 <span class="ampm">am</span></p>
+   		      </div>
+       		  <div class="afternoon">
+       		    <p class="price">$32</p>
+       		    <p class="time">2:27 <span class="ampm">pm</span></p>
+   		      </div>
+       		  <div class="graph"></div>
+       		  <div class="clear"></div>
+       		  <div class="teetimes">
+       		    <div class="teetime fleft golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright pga">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+       		    <div class="teetime fleft other">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+   		      </div>
+       		  <!-- teetimes -->
+   		  </div>
+          <div class="block">
+       		  <p class="title">North Shore Golf Club</p>
+       		  <img class="heart"  src="img/heart.svg">
+       		  <div class="clear"></div>
+       		  <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg"> <img class="star"  src="img/star.svg">
+       		  <p class="starcount">(47)</p>
+       		  <div class="clear"></div>
+       		  <div class="morning">
+       		    <p class="price">$40</p>
+       		    <p class="time">10:15 <span class="ampm">am</span></p>
+   		      </div>
+       		  <div class="afternoon">
+       		    <p class="price">$32</p>
+       		    <p class="time">2:27 <span class="ampm">pm</span></p>
+   		      </div>
+       		  <div class="graph"></div>
+       		  <div class="clear"></div>
+       		  <div class="teetimes">
+       		    <div class="teetime fleft golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright pga">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+       		    <div class="teetime fleft other">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="teetime fright golfnow">
+       		      <div class="teeleft">
+       		        <p class="price">$40</p>
+       		        <button class="bookbtn">
+       		          <p class="book">Book</p>
+       		          <p class="provider">Golf Now</p>
+   		            </button>
+   		          </div>
+       		      <div class="teeright">
+       		        <p class="time">10:05 <span class="ampm">am</span></p>
+       		        <p class="players">1-4 <span class="play">Players</span></p>
+       		        <div class="features"> <img class="feature" src="img/18.svg"> <img class="feature" src="img/deal.svg"></div>
+   		          </div>
+       		      <div class="clear"></div>
+   		        </div>
+       		    <div class="clear"></div>
+   		      </div>
+       		  <!-- teetimes -->
+   		  </div>
+       	  	
+       	  	
+            
+      </div> <!-- Grid -->
+    
+</div><!-- Main -->
+
+</body>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script> 
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="plugin/search/search.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
