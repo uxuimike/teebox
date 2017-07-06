@@ -28,15 +28,14 @@ export default class Menu extends Component {
         position: 'fixed',
         top: '0px',
         left: '0px',
-        height: '64px',
         margin: '0px',
         padding: '0px',
         zIndex: this.props.styles.zIndex.Menu
       },
       ham: {
         backgroundImage: 'url(' + ham + ')',
-        width: '64px',
-        height: '64px',
+        height: '64rem',
+        width: '64rem',
         margin: '0px',
         padding: '0px',
         border: 'none'
@@ -48,7 +47,7 @@ export default class Menu extends Component {
 
     return(
       <nav id='MainMenu' className={css(aStyle.comp)}>
-          <div className={css(aStyle.ham)} type='button' onClick={this.onHamburger.bind(this)} />
+          <div type='button' className={css(aStyle.ham)} onClick={this.onHamburger.bind(this)}  />
         <div id='MenuWrap' className={css(aStyle.wrap)}>
           <ul>
             <a to="work" onClick={this.onHamburger.bind(this)} ><li>Work</li></a>

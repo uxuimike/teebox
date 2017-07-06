@@ -78,11 +78,11 @@ export default class Calendar extends Component {
     return(
       <div  id='Calendar' className={css(aStyle.comp)} >
         <div className={css(aStyle.weekmonth)}>
-          <MonthPicker onToggleMonth={this.onToggleMonth.bind(this)} height={500}/>
+          <MonthPicker onToggleMonth={this.onToggleMonth.bind(this)} height={572}/>
           {daysList}
           <div className='clear' />
         </div>
-        <Datepicker toggleMonth={this.state.toggleMonth} onSelectDay={this.onSelectDayMonth.bind(this)} selectedDay={this.props.calendar.selectedDay}/>
+        <Datepicker toggleMonth={this.state.toggleMonth} onSelectDay={this.onSelectDayMonth.bind(this)} />
         <div className='clear' />
       </div>
     )

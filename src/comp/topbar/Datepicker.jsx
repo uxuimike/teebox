@@ -8,10 +8,6 @@ import '../../css/daypicker/style.scss';
 @inject('styles', 'calendar') @observer
 export default class Calendar extends Component {
 
-  constructor() {
-    super();
-  }
-
   onFocus(foc){
     if (this.state.focused === false) {
       this.setState({
@@ -33,25 +29,26 @@ export default class Calendar extends Component {
 
     const slideIn = {
         '0%': {
-            transform: 'translateY(-600px)',
+            transform: 'translateY(-640rem)',
         },
         '100%': {
-            transform: 'translateY(-72px)',
+            transform: 'translateY(0)',
         },
     };
 
     const slideOut = {
         '0%': {
-          transform: 'translateY(-72px)',
+          transform: 'translateY(0)',
         },
         '100%': {
-            transform: 'translateY(-600px)',
+            transform: 'translateY(-640rem)',
         },
     };
 
     const aStyle = StyleSheet.create({
       comp: {
         position: 'absolute',
+        top: '0',
         width: '100%',
         boxSizing: 'border-box',
         margin: '0',
@@ -69,16 +66,13 @@ export default class Calendar extends Component {
       }
     });
 
-    const today = new Date();
-    const max = new Date();
-    max.setFullYear(max.getFullYear()+1)
+    const today = this.props.calendar.today;
 
     return(
       <div  id='Datepicker' className={css(this.props.toggleMonth ? aStyle.showMonth : aStyle.hideMonth, aStyle.comp)}>
         <DayPicker
-          month={this.props.selectedDay}
+          month={this.props.calendar.selectedDay}
           fromMonth={today}
-          toMonth={max}
           onDayClick={ this.onSelectDay.bind(this)}
           selectedDays={ this.props.selectedDay }
           disabledDays={ { before: today }}

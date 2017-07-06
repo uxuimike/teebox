@@ -12,18 +12,18 @@ export default class LocationSearch extends Component {
 
         boxSizing: 'border-box',
       	width: '100%',
-        height: '56px',
+        height: '56rem',
       	margin: '0',
-      	padding: '14px 0 0 0',
+      	padding: '14rem 0 0 16rem',
         borderBottom: '1px solid rgba(255, 255, 255, 0.4)',
         fontFamily: 'Font-Light',
       },
       l1: {
-        fontSize: '32px',
+        fontSize: '32rem',
         color: this.props.styles.colors.onPrimary1
       },
       l2: {
-        fontSize: '24px',
+        fontSize: '24rem',
         color: this.props.styles.colors.onPrimary2
       }
     });

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import { StyleSheet, css } from 'aphrodite/no-important';
 
-import Highlight from '../../img/highlightCircle.svg';
+import MonthBlock from './MonthBlock.jsx';
 import CalIcon from '../../img/calendar.svg';
 
 @inject('styles', 'calendar') @observer
@@ -13,6 +13,10 @@ export default class MonthPicker extends Component {
     this.state = {
       active: false
     }
+  }
+
+  componentWillMount(){
+    this.props.calendar.createMonths();
   }
 
   onToggle(){
@@ -26,20 +30,10 @@ export default class MonthPicker extends Component {
         position: 'absolute',
         overflow: 'hidden',
         top: '0',
-        left: '0px',
+        left: '0',
         display: 'block',
         boxSizing: 'border-box',
-        width: '64px',
-        padding: '16px 0 0 0',
-        backgroundImage: 'url(' + CalIcon + ')',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: '28px 28px',
-        backgroundPosition: 'center 60%',
-        backgroundColor: 'rgba(0, 0, 0, .1)',
-        fontFamily: 'Font-Light',
-        color: this.props.styles.colors.onPrimary1,
-        fontSize: '14px',
-        textAlign: 'center',
+        width: '64rem',
         cursor: 'pointer',
         zIndex: this.props.styles.zIndex.Cal,
         transition: this.props.styles.transitions.calendar
@@ -47,13 +41,21 @@ export default class MonthPicker extends Component {
     });
 
     let compStyle = {
-      height: this.props.height + 'px',
+      height: this.props.height + 'rem',
     };
+
+    let selectedMonth = this.props.calendar.selectedDay.getMonth();
+
+    let months = this.props.calendar.months;
+
+    const monthList = months.map((month, index) => (
+      <MonthBlock  key={index} month={months[index]}/>
+    ))
 
 
     return(
       <div className={css(aStyle.comp)} style={compStyle} onClick={this.onToggle.bind(this)}>
-        {this.props.calendar.months[this.props.calendar.selectedDay.getMonth()]}
+        {monthList}
       </div>
     )
   }

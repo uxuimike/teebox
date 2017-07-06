@@ -20,16 +20,16 @@ export default class TopBar extends Component {
     const aStyle = StyleSheet.create({
       comp: {
         position: 'fixed',
-        top: '0px',
-        left: '0px',
+        top: '0',
+        left: '0',
         backgroundColor: this.props.styles.colors.primary1,
         width: '100%',
-        height: '128px',
+        height: '128rem',
         zIndex: this.props.styles.zIndex.TopBar
       },
       row1: {
         position: 'absolute',
-        padding: '0 16px 0 80px',
+        padding: '0 16rem 0 64rem',
         width: '100%',
         backgroundColor: this.props.styles.colors.primary1,
         zIndex: this.props.styles.zIndex.row1,
@@ -37,7 +37,7 @@ export default class TopBar extends Component {
       row2: {
         position: 'absolute',
         width: '100%',
-        top: '56px',
+        top: '56rem',
         zIndex: this.props.styles.zIndex.row2
       }
     });

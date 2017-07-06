@@ -1,6 +1,3 @@
-import { observable } from 'mobx';
-import { action } from 'mobx';
-
 class StyleStore {
   colors = {
     primary1: 'rgb(25, 165, 125)',
@@ -19,16 +16,6 @@ class StyleStore {
 
   transitions = {
     calendar: 'height 0.6s'
-  }
-
-  @observable view = {
-    width: 640,
-    height: 960,
-    scale: 10
-  }
-
-  @action setView(w, h, s) {
-    this.view = {width: w, height: h, scale: s};
   }
 
 }

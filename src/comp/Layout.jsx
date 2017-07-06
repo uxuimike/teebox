@@ -25,20 +25,22 @@ export default class Layout extends Component {
   }
 
   onResize(){
-    var sf = 10;
+    var sf = 1;
     var cw = window.innerWidth;
     var ch = window.innerHeight;
 
     if (cw > ch) {
-      sf = 10 * (ch)/640;
+      sf = (ch)/640;
     }else {
-      sf = 10 * (cw)/640;
+      sf = (cw)/640;
     }
 
-    if (sf > 10) {
-      sf = 10;
+    if (sf > 1) {
+      sf = 1;
     }
-    this.props.styles.setView(cw, ch, sf);
+
+    document.documentElement.style.fontSize = sf + 'px';
+
   }
 
   onScroll(){
@@ -51,7 +53,7 @@ export default class Layout extends Component {
 
   render(){
     return(
-      <div className="App">
+      <div className="App" >
         <SearchPage />
       </div>
 

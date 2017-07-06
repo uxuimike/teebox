@@ -60,9 +60,9 @@ export default class CalendarBlock extends Component {
         float: 'left',
         boxSizing: 'border-box',
       	width: '12.5%',
-        height: '72px',
+        height: '72rem',
       	margin: '0',
-      	padding: '16px 0 0 0',
+      	padding: '16rem 0 0 0',
         cursor: 'pointer',
         textAlign: 'center',
         transition: 'all 0.2s',
@@ -79,25 +79,25 @@ export default class CalendarBlock extends Component {
       },
       l1: {
         margin: '0',
-        padding: '2px',
+        padding: '2rem',
         fontFamily: 'Font-Light',
         color: this.props.styles.colors.onPrimary1,
-        fontSize: '14px',
+        fontSize: '14rem',
       },
       l2: {
         display: 'block',
-        margin: '-2px 0 0 0',
+        margin: '-2rem 0 0 0',
         padding: '0',
         fontFamily: 'Font-Light',
         color: this.props.styles.colors.onPrimary2,
-        fontSize: '24px',
+        fontSize: '24rem',
       },
       todayS: {
-        width: '4px',
-        height: '4px',
-        margin: '0px auto 0 auto',
+        width: '4rem',
+        height: '4rem',
+        margin: '2rem auto 0 auto',
         backgroundColor: this.props.styles.colors.onPrimary1,
-        borderRadius: '4px'
+        borderRadius: '4rem'
       }
     });
 
