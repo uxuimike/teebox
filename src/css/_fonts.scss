@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Font-Light;
+	src: url(./font/gothamhft-light-webfont.eot);
+	src: url(./font/gothamhft-light-webfont.ttf);
+	src: url(./font/gothamhft-light-webfont.woff);
+	src: url(./font/gothamhft-light-webfont.woff2);
+}
+
+@font-face {
+	font-family: Font-Book;
+	src: url(./font/gothamhft-book-webfont.eot);
+	src: url(./font/gothamhft-book-webfont.ttf);
+	src: url(./font/gothamhft-book-webfont.woff);
+	src: url(./font/gothamhft-book-webfont.woff2);
+}
+
+@font-face {
+	font-family: Font-Medium;
+	src: url(./font/gothamhft-medium-webfont.eot);
+	src: url(./font/gothamhft-medium-webfont.ttf);
+	src: url(./font/gothamhft-medium-webfont.woff);
+	src: url(./font/gothamhft-medium-webfont.woff2);
+}
+
+@font-face {
+	font-family: Font-Bold;
+	src: url(./font/gothamhft-bold-webfont.eot);
+	src: url(./font/gothamhft-bold-webfont.ttf);
+	src: url(./font/gothamhft-bold-webfont.woff);
+	src: url(./font/gothamhft-bold-webfont.woff2);
+}

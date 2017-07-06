@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 
-import SearchPage from './pages/SearchPage.jsx';
+import './css/App.scss';
+import Layout from './comp/Layout.jsx';
 
 class App extends Component {
 
   render() {
 
     return (
-      <div className="App">
-        <SearchPage />
-      </div>
+      <Layout />
     );
   }
 }

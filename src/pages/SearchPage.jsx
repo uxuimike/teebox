@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import TopBar from '../comp/TopBar.jsx';
+import Menu from '../comp/menu/Menu.jsx';
+import TopBar from '../comp/topbar/TopBar.jsx';
+import Todo from '../comp/ToDo.jsx';
 
 
 export default class SearchPage extends Component {
@@ -9,6 +11,7 @@ export default class SearchPage extends Component {
 
     return(
       <div>
+        <Menu />
         <TopBar />
       </div>
     )

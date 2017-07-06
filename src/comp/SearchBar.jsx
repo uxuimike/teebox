@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
-import * as feedActs from '../actions/feedActions';
-import {connect} from 'react-redux';
-import {hashHistory} from "react-router";
 
 import SearchList from './SearchList.jsx';
-
-@connect((store) => {
-    return {
-        results : store.feed.search
-    }
-})
 
 export default class SearchBar extends Component {
 

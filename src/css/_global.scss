@@ -1,0 +1,31 @@
+$desktop: "(min-width: 1024px)";
+$trans: 'all 0.6s';
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+
+}
+
+body {
+  background-color: rgb(242, 242, 242);
+  color: rgb(79, 79, 79);
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear: both;
+  background-color: #0F0;
+}
+
+button {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+}
